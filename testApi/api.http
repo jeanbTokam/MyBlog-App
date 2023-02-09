@@ -1,6 +1,11 @@
 ### Second request using a variable 
-@test = jean Tokam
-POST http://localhost:5000/api/posts/createPost/
+@test = jbe Tokam
+@host=http://localhost:5000
+@api=api/posts
+@endpoint=createPost
+#Implement global variable  host/api/endpoint
+###POST http://localhost:5000/api/posts/createPost/
+POST {{host}}/{{api}}/{{endpoint}}
 Content-Type: application/json
 
 {
@@ -11,16 +16,16 @@ Content-Type: application/json
 
 ### Third request using a variable
 @test = jean Tokam
-GET http://localhost:5000/api/posts/getPosts/
+GET {{host}}/api/posts/getPosts/
 Content-Type: application/json
 
 ### Fourth request using a variable
-GET http://localhost:5000/api/posts/getPost/63e45484f05664cd599f278d
+GET {{host}}/api/posts/getPost/63e45484f05664cd599f278d
 Content-Type: application/json
 
 ### Fifth request using a variable
 @test = je Tokam
-PUT  http://localhost:5000/api/posts/updatePost/63e45484f05664cd599f278d
+PUT  {{host}}/api/posts/updatePost/63e45484f05664cd599f278d
 Content-Type: application/json
 
 {
@@ -30,7 +35,7 @@ Content-Type: application/json
 }
 
 ### Sixth request using a variable
-DELETE http://localhost:5000/api/posts/deletePost/63c0dea66d54d5ad59141a66
+DELETE {{host}}/api/posts/deletePost/63c0dea66d54d5ad59141a66
 Content-Type: application/json
 
 
