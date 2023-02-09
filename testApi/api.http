@@ -1,0 +1,38 @@
+### Second request using a variable 
+@test = jean Tokam
+POST http://localhost:5000/api/posts/createPost/
+Content-Type: application/json
+
+{
+    "title": 1,
+    "title": "TEST ",
+    "description": "TEST body {{test}}"
+}
+
+### Third request using a variable
+@test = jean Tokam
+GET http://localhost:5000/api/posts/getPosts/
+Content-Type: application/json
+
+### Fourth request using a variable
+GET http://localhost:5000/api/posts/getPost/63e45484f05664cd599f278d
+Content-Type: application/json
+
+### Fifth request using a variable
+@test = je Tokam
+PUT  http://localhost:5000/api/posts/updatePost/63e45484f05664cd599f278d
+Content-Type: application/json
+
+{
+    "title": 1,
+    "title": "TEST ",
+    "description": "TEST body {{test}}"
+}
+
+### Sixth request using a variable
+DELETE http://localhost:5000/api/posts/deletePost/63c0dea66d54d5ad59141a66
+Content-Type: application/json
+
+
+
+
